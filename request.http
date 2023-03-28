@@ -1,0 +1,23 @@
+GET http://localhost:3000/api/v1/redis/members HTTP/1.1
+
+###
+
+GET http://localhost:3000/api/v1/redis/members/00:C2:C6:F2:26:0F HTTP/1.1
+
+###
+
+GET http://localhost:3000/api/v1/redis/presence HTTP/1.1
+
+###
+
+POST http://localhost:3000/api/v1/redis/newMember HTTP/1.1
+content-type: application/json
+
+{
+    "mac": "00:C2:C6:F2:26:0F",
+    "alias": "DESKTOP-BJR07CT"
+}
+
+###
+
+DELETE http://localhost:3000/api/v1/redis/deleteMember/00:C2:C6:F2:26:0F HTTP/1.1
